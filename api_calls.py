@@ -78,7 +78,7 @@ def bulk_update(file):
 # Delete User
 
 def delete_user():
-	ic.delete_user(email="carter@gmail.com")
+	ic.delete_user(email="markgreen@placeholder.email")
 
 print("working?")
 
