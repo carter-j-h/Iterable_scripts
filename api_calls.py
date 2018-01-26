@@ -3,14 +3,17 @@ import json
 import requests
 import time
 
-from iterable_wrapper import IterableAPI
+from iterablepythonwrapper.client import IterableApi
 
 # Iterable Instance Credentials 
-API_KEY = "94c3333a8e224b32b93a40788d1927cc"
+with open('config.json') as json_data_file:
+	data = json.load(json_data_file)
+
+API_KEY = data['iterable']['api_key']
 
 # Instantiate the Iterable API Wrapper Class
 
-ic = IterableAPI(api_key=API_KEY)
+ic = IterableApi(api_key=API_KEY)
 
 
 def user_update(file):
@@ -77,10 +80,10 @@ def bulk_update(file):
 
 # Delete User
 
-def delete_user():
-	ic.delete_user(email="markgreen@placeholder.email")
+# def delete_user():
+# 	ic.delete_user(email="markgreen@placeholder.email")
 
-print("working?")
+
 
 # delete_user()
 

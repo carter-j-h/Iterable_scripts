@@ -1,12 +1,15 @@
 import csv
-import time
-import requests
 import json
-
+import os
+import requests
+import time
 # Marketo Instance Credentials 
-url = "https://298-TCJ-281.mktorest.com"
-client_id = "649686eb-fbb6-4eeb-823d-4710fec8a25b"
-client_secret = "cvGN7iYCgPLl7xcWWa9jdXoehCdOHUSC"
+with open('config.json') as json_data_file:
+	data = json.load(json_data_file)
+
+url = data['marketo']['url']
+client_id = data['marketo']['client_id']
+client_secret = data['marketo']['client_secret']
 
 
 class MarketoAPI():

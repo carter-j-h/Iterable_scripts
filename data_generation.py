@@ -23,7 +23,7 @@ class GeneratData(object):
 
 			u = fake.profile()
 			u.pop('current_location')
-
+			print('blah')
 			email = u.pop('mail')
 			print(u)
 
